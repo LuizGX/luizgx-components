@@ -1,0 +1,55 @@
+@import "../scss/variables";
+@import "../scss/mixins";
+
+.dropdown-menu {
+    all: unset;
+    position: relative;
+    
+    &__icon-button {
+        padding: $spacing-1;
+        cursor: pointer;
+    }
+    
+    &__dropdown-container{
+        @include box-shadow;
+        position: absolute;
+        border: 1px solid $grey-300;
+        border-radius: $spacing-half;
+        background-color: white;
+        z-index: 1000;    
+
+        &.left {
+            right: $spacing-2;
+            top: 0;
+        }
+
+        &.right {
+            left: $spacing-2;
+            top: 0;
+        }
+        
+        &__option-icon {
+            color: $grey-500;
+            margin-right: $spacing-1;
+            height: 14px;
+            width: 16px;
+        }
+        
+        ul{
+            margin: $spacing-1 0;
+            padding: 0;
+            list-style-type: none;
+            
+            li:hover{
+                background-color: $grey-200;
+            }
+            
+            li {
+                line-height: $spacing-4;
+                display: flex;
+                padding: 0 $spacing-2;
+                cursor: pointer;
+            }
+        }
+    }
+}

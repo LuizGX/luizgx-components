@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('woff');
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+input, textarea, button, select {
+  font: inherit;
+}

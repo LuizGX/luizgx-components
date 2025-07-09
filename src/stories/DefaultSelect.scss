@@ -1,0 +1,97 @@
+@import "../scss/variables";
+@import "../scss/mixins";
+
+.default-select {
+    text-align: left;
+    border: 1px solid $grey-300;
+    position: relative;
+    border-radius: $spacing-half;
+    cursor: pointer;
+
+    &__dropdown-input {
+        padding: 9.5px $spacing-1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+
+        &__value.placeholder {
+            color: $grey-500;
+        }
+
+        &__tools__tool svg {
+            transition: all 0.2s ease-in-out;
+        }
+    
+        &__tools__tool svg.translate {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__dropdown-menu {
+        @include box-shadow;
+        width: 100%;
+        position: absolute;
+        border: 1px solid $grey-300;
+        border-radius: $spacing-half;
+        overflow: auto;
+        background-color: white;
+        max-height: 312px;
+        min-height: 50px;
+        z-index: 1000;
+
+        &::-webkit-scrollbar {
+            width: $spacing-half;
+
+            &-thumb {
+                background: $grey-500;
+                border-radius: $spacing-half;
+
+                &:hover {
+                    background: $grey-600;
+                }
+            }
+        }
+
+        &__search-box {
+            padding: $spacing-half;
+
+            & input {
+                width: 100%;
+                box-sizing: border-box;
+                padding: $spacing-half;
+                border: 1px solid $grey-500;
+                border-radius: $spacing-half;
+            }
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $grey-100;
+            border-radius: $spacing-half;
+        }
+
+        &__item {
+            padding: $spacing-1 $spacing-1;
+            cursor: pointer;
+            transition: background-color 0.35s ease;
+            font-weight: $fw-medium;
+
+            &:hover {
+                background-color: $grey-200;
+            }
+
+            &.selected {
+                background-color: $grey-300;
+                font-weight: $fw-semi-bold;
+            }
+        }
+
+        &.alignment--left {
+            left: 0;
+        }
+
+        &.alignment--right {
+            right: 0;
+        } 
+    }    
+}

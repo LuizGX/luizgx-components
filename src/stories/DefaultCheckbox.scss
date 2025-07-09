@@ -1,0 +1,16 @@
+@import "../scss/variables";
+@import "../scss/mixins";
+
+.default-checkbox {
+    display: inline;
+    @include unselectable;
+    
+    &__label {
+        font-weight: $fw-light;
+    }
+
+    &__checkbox {
+        accent-color: $brand-color;
+        margin: 0;
+    }
+}

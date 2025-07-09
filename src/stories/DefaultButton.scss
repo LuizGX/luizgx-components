@@ -1,0 +1,104 @@
+@import "../scss/variables";
+@import "../scss/mixins";
+
+.default-button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: auto;
+    border-radius: 4px;
+    font-weight: $fw-semi-bold;
+    letter-spacing: .02em;
+    padding: 0px $spacing-1-and-a-half;
+    cursor: pointer;
+    box-sizing: border-box;
+    @include unselectable;
+
+    &__spacer {
+        margin-left: $spacing-three-quarters;
+    }
+
+    &__children {
+        display: flex;
+    }
+
+    &.primary-button {
+        background-color: $brand-color;
+        color: white;
+    
+        &:hover{
+            background-color: $brand-color-dark;
+        }
+    
+        &:active{
+            background-color: $brand-color-darkest;
+        }
+    }
+
+    &.secondary-button {
+        background-color: $grey-300;
+        color: black;
+        
+        &:hover{
+            background-color: $grey-400
+        }
+    
+        &:active{
+            background-color: $grey-500;
+        }
+    }
+
+    &.danger-button {
+        background-color: $danger-color;
+        color: white;
+    
+        &:hover{
+            background-color: $danger-color-dark;
+        }
+    
+        &:active{
+            background-color: $danger-color-darkest;
+        }
+    }
+
+    &.edit-button {
+        background-color: $edit-color;
+        color: white;
+    
+        &:hover{
+            background-color: $edit-color-dark;
+        }
+    
+        &:active{
+            background-color: $edit-color-darkest;
+        }
+    }
+    
+    &.outline-button {
+        border: 1px solid $grey-300;
+
+        &:hover{
+            background-color: $grey-200;
+        }
+        
+        &:active{
+            background-color: $grey-300;
+        }
+    }
+
+    &.text-button {
+        color: $brand-color;
+        height: auto;
+        padding: 0;
+        
+        &:hover{
+            background: rgba($brand-color-dark, 0.1);   
+        }
+    
+        &:active{
+            background: rgba($brand-color-darkest, 0.2);
+        }
+    }
+}

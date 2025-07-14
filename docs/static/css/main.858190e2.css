@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(../../7e687123cd4528224ce5.ttf) format('woff');
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+input, textarea, button, select {
+  font: inherit;
+}
+
+/*# sourceMappingURL=main.858190e2.css.map*/
